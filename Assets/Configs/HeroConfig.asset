@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9794775692aa4aacbe781ccbdfb4ce07, type: 3}
+  m_Name: HeroConfig
+  m_EditorClassIdentifier: 
+  HeroPrefab: {fileID: 4495640930567508297, guid: cfa548ce749aab043a5804b70f71c706,
+    type: 3}
+  Camera: {fileID: 1569415438335571626, guid: cc04d044bb4267341b52db7ca7256d06, type: 3}
