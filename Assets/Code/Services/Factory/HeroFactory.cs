@@ -1,4 +1,5 @@
-﻿using Code.Abstract;
+﻿using System.Threading.Tasks;
+using Code.Abstract;
 using Code.Configs;
 using Leopotam.Ecs;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace Code.Services.Factory
 		}
 		public void CreateHero()
 		{
+			Debug.Log("Hero");
 			Hero = Object.Instantiate(_heroConfig.HeroPrefab);
 			BindCamera(Hero.transform);
 			Hero.GetComponent<MonoBehaviourEntity>().Initial(_world);

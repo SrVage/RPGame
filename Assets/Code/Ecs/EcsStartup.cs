@@ -1,15 +1,18 @@
 using Leopotam.Ecs;
 using UnityEngine;
+using Zenject;
 
 namespace Client {
-    sealed class EcsStartup : MonoBehaviour {
-        EcsWorld _world;
+    sealed class EcsStartup : MonoBehaviour
+    {
+        [Inject] EcsWorld _world;
         EcsSystems _systems;
 
-        void Start () {
+        public void Start () {
             // void can be switched to IEnumerator for support coroutines.
             
-            _world = new EcsWorld ();
+            //_world = new EcsWorld ();
+            Debug.LogWarning(_world);
             _systems = new EcsSystems (_world);
 #if UNITY_EDITOR
             Leopotam.Ecs.UnityIntegration.EcsWorldObserver.Create (_world);
@@ -17,7 +20,7 @@ namespace Client {
 #endif
             _systems
                 // register your systems here, for example:
-                // .Add (new TestSystem1 ())
+                .Add (new MoveHeroSystem())
                 // .Add (new TestSystem2 ())
                 
                 // register one-frame components (order is important), for example:
